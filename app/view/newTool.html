@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ToolManagerPro</title>
+		<style>
+			p {
+				background-color: rgb(182, 180, 251);
+				font-size: 40px; 
+			}
+			.titleRow {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				background-color: rgb(194, 192, 249);
+			}
+			.inputRow {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				background-color: rgb(194, 192, 249);
+				margin-top: 5px; 
+			}
+			.labelItem {
+				background-color: rgb(182, 180, 251);
+				flex-grow: 0;
+				font-size: 32px; 
+			}
+			.inputItem {
+				flex-grow: 4;
+				width: 20px;
+			}
+			.buttonRow {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				margin-top: 10px;
+			}
+			.buttonItem {
+				margin-top: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='titleRow'>
+			<p>Enter Tool Information:</p>
+		</div>
+		<div class='inputRow'>
+			<label class='labelItem'>Type: </label>
+			<input class='inputItem' type='text' id='name'>
+		</div>
+		<div class='inputRow'>
+			<label class='labelItem'>Dimensions: </label>
+			<input  class='inputItem' type='text' id='d1'>
+			<label class='labelItem'> x </label>
+			<input  class='inputItem' type='text' id='d2'>
+			<label class='labelItem'> x </label>
+			<input  class='inputItem' type='text' id='d3'>
+		</div>
+		<div class='inputRow'>
+			<label class='labelItem'>Location: </label>
+			<label class='inputItem' >
+				<input type='radio' name='machine' value='0'>Storage
+			</label>
+			<label class='inputItem' >
+				<input type='radio' name='machine' value='1'>Machine 1
+			</label>
+			<label class='inputItem' >
+				<input type='radio' name='machine' value='2'>Machine 2
+			</label>
+			<label class='inputItem' >
+				<input type='radio' name='machine' value='3'>Machine 3
+			</label>
+		</div>
+		<div class='inputRow'>
+			<label class='labelItem'>Arrived: </label>
+			<input  class='inputItem' type='date' id='ad'>
+		</div>
+		<div class='buttonRow'>
+			<button type='button' id='create'>Create</button>
+		</div>
+	</body>
+	<script type="module" src="/newTool.js" charset="utf-8"></script>
+</html>
+
+
+
+
+

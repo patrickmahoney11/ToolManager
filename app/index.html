@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ToolManagerPro</title>
+		<style>
+			p {
+				background-color: rgb(182, 180, 251);
+				font-size: 40px; 
+			}
+			.titleRow {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				background-color: rgb(194, 192, 249);
+			}
+			.bodyRow {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				background-color: rgb(194, 192, 249);
+				margin-top: 5px; 
+			}
+			.bodyItem {
+				background-color: rgb(182, 180, 251);
+				flex-grow: 0;
+				font-size: 32px; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class='titleRow'>
+			<p>Tool Manager Pro:</p>
+		</div>
+		<div class='bodyRow'>
+			<a class='bodyItem' id='newTool' href='/view/newTool.html'>Create Tool</a>
+		</div>
+		<div class='bodyRow'>
+			<a class='bodyItem' id='updateTool' href='/view/updateTool.html'>Update Tool</a>
+		</div>
+		<div class='bodyRow'>
+			<a class='bodyItem' id='delTool' href='/view/delTool.html'>Delete Tool</a>
+		</div>
+		<div class='bodyRow'>
+			<a class='bodyItem' id='toolList' href='/view/toolList.html'>View Tools</a>
+		</div>
+		<div class='bodyRow'>
+			<a class='bodyItem' id='machList' href='/view/machList.html'>View Machines</a>
+		</div>
+	</body>
+</html>
