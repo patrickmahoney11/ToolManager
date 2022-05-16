@@ -108,15 +108,6 @@ app.delete('/tools/:id', (req, res) => {
 			coll.deleteOne(criteria)
 			res.type('application/json')
 			res.status(200)
-			// res.json(conn)
-			// , function(err, result){
-			// 	if (err) console.log(err)
-			// 	else {
-			// 		res.type('application/json')
-			// 		res.status(200)
-			// 		res.json(conn)
-			// 	  }
-			// })
 		}
 	})  
 })
@@ -128,8 +119,8 @@ app.put('/tools/:id', function(req, res){
 	const newValues = req.body
 	MongoClient.connect(url, function(err, conn) {
 		if (err) throw err;
-		const dbo = conn.db("manufacturing");
-		dbo.collection('tools').updateOne(criteria, {$set: newValues}, function(err, result){
+		const db = conn.db("manufacturing");
+		db.collection('tools').updateOne(criteria, {$set: newValues}, function(err, result){
 			if (err) console.log(err)
 			else {
 				res.type('application/json')
