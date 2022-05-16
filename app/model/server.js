@@ -96,7 +96,7 @@ app.post('/tools', function(req, res) {
 	})
 })
 
-// DELETE a tool by ID 627b0cbf6c2d3a286944287d
+// DELETE a tool by ID 627b494225314bb4b7d6131f
 app.delete('/tools/:id', (req, res) => {
 	console.log(`${req.params.id}`)
 	MongoClient.connect(url, function(err, conn) {
@@ -105,16 +105,18 @@ app.delete('/tools/:id', (req, res) => {
 			const db = conn.db('manufacturing')
 			const coll = db.collection('tools')
 			const criteria = {_id: new mongo.ObjectID(req.params.id)}
-			coll.deleteOne(criteria, true).toArray(function(err, result) {
-				if (err) console.log(err)
-				else {
-					conn.close()
-					// Send the data back 
-					res.type('application/json')
-					res.status(200)
-					res.json(result)					
-				}
-			})
+			coll.deleteOne(criteria)
+			res.type('application/json')
+			res.status(200)
+			// res.json(conn)
+			// , function(err, result){
+			// 	if (err) console.log(err)
+			// 	else {
+			// 		res.type('application/json')
+			// 		res.status(200)
+			// 		res.json(conn)
+			// 	  }
+			// })
 		}
 	})  
 })
